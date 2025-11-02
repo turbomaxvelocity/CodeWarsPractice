@@ -1,0 +1,58 @@
+// You have complete freedom over the function signatures, as long as all the needed functions get defined.
+// Do not `using namespace std`, because your `plus` function might clash with `std::plus` :)
+#include <functional>
+auto zero(std::function<int(int)>op=nullptr) {
+  //op= optional operation function(default is nullpty)
+  //if op exists, apply it to zero otherwise just return zero
+  return op ? op(0) : 0;
+}
+auto one(std::function<int(int)>op=nullptr) {
+  return op ? op(1) : 1;
+}
+auto two(std::function<int(int)>op=nullptr) {
+  return op ? op(2) : 2;
+}
+auto three(std::function<int(int)>op=nullptr) {
+  return op ? op(3) : 3;
+}
+auto four(std::function<int(int)>op=nullptr) {
+  return op ? op(4) : 4;
+}
+auto five(std::function<int(int)>op=nullptr) {
+  return op ? op(5) : 5;
+}
+auto six(std::function<int(int)>op=nullptr) {
+  return op ? op(6) : 6;
+}
+auto seven(std::function<int(int)>op=nullptr) {
+  return op ? op(7) : 7;
+}
+auto eight(std::function<int(int)>op=nullptr) {
+  return op ? op(8) : 8;
+}
+auto nine(std::function<int(int)>op=nullptr) {
+  return op ? op(9) : 9;
+}
+//operation functions
+//each operation captures the right operand
+//and returns a functions that will perform
+//the operation when given the left operand
+
+auto plus(int right) {
+  //captures right, returns a lamda that adds
+  return [right](int left){return left + right;};
+  
+}
+auto minus(int right) {
+  //captures right, returns a lamda that subtracts
+  return [right](int left){return left - right;};
+}
+auto times(int right) {
+  //captures right, returns a lamda that mutliplies
+  return [right](int left){return left * right;};
+}
+auto divided_by(int right) {
+  //captures right, returns a lamda that adds
+  return [right](int left){return left / right;};
+  
+}
