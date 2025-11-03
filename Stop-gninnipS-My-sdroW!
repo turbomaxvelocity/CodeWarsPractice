@@ -1,0 +1,21 @@
+#include <string>
+#include <algorithm>
+std::string spinWords(const std::string &str)
+{
+  //copy string so we can modify it
+  std::string result = str;
+  int start = 0;//marks start of current word
+  for(int i = 0; i <=result.length();i++){
+    //checks for space/end of string
+    if(i == result.length()|| result[i] == ' '){
+      int wordLength = i - start;
+      //reverse if >= 5
+      if(wordLength>=5){
+        std::reverse(result.begin()+ start, result.begin()+i);
+      }
+      //move pointer to next word
+      start = i+1;
+    }
+  }
+  return result;
+}
