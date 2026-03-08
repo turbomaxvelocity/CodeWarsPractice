@@ -1,0 +1,10 @@
+//The function converts an input integer into a string to square each individual digit and concatenate the results into a new string. 
+//This resulting string is then converted back into a standard integer and returned as the final output.
+
+#include <string>
+int square_digits(int num) {
+  
+  std::string result = "", s = std::to_string(num);
+  for(char c : s)result += std::to_string((c-'0')*(c-'0'));
+ return std::stoi(result);
+}
