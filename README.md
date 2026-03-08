@@ -2,6 +2,10 @@
 # CodeWars Challenges
 
 ## Completed Challenges
+### Square Every Digit (7 kyu)
+- **File:** `previous_challenge.cpp`
+- **Concepts:** String Manipulation, ASCII Arithmetic, Type Casting, Range-based Loops.
+- **What I Learned:** learned how to isolate digits by converting an int to a std::string. I also learned to use the c - '0' trick to transform ASCII characters into their literal integer values for mathematical operations.
 
 ### Stop gninnipS My sdroW! (6 kyu)
 * File: `spinWords.cpp`
